@@ -8,6 +8,7 @@ import { Water } from './game/Water';
 import { Buildings } from './game/Buildings';
 import { Trees } from './game/Trees';
 import { GameUI } from './game/GameUI';
+import { AudioSystem } from './game/AudioSystem';
 
 export const Game3D = () => {
   return (
@@ -56,6 +57,7 @@ export const Game3D = () => {
             <Buildings />
             <Trees />
             <Player />
+            <AudioSystem />
             
             <PointerLockControls />
           </Suspense>

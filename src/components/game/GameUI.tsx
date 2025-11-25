@@ -3,8 +3,8 @@ import Icon from '@/components/ui/icon';
 import { useState, useEffect } from 'react';
 
 export const GameUI = () => {
-  const [health, setHealth] = useState(100);
-  const [money, setMoney] = useState(1000);
+  const [health] = useState(100);
+  const [money] = useState(1000);
   const [hunger, setHunger] = useState(100);
   const [energy, setEnergy] = useState(100);
 

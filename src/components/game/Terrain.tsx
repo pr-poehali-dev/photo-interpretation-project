@@ -3,11 +3,16 @@ import * as THREE from 'three';
 
 export const Terrain = () => {
   const terrainGeometry = useMemo(() => {
-    const geometry = new THREE.PlaneGeometry(200, 200, 50, 50);
+    const geometry = new THREE.PlaneGeometry(300, 300, 100, 100);
     const positions = geometry.attributes.position.array;
     
     for (let i = 0; i < positions.length; i += 3) {
-      positions[i + 2] = Math.random() * 0.5;
+      const x = positions[i];
+      const y = positions[i + 1];
+      positions[i + 2] = 
+        Math.sin(x * 0.05) * 0.8 + 
+        Math.cos(y * 0.05) * 0.8 + 
+        Math.random() * 0.3;
     }
     
     geometry.attributes.position.needsUpdate = true;
@@ -24,13 +29,11 @@ export const Terrain = () => {
         geometry={terrainGeometry}
       >
         <meshStandardMaterial 
-          color="#7cb342"
-          roughness={0.9}
-          metalness={0.1}
+          color="#6b8e23"
+          roughness={0.95}
+          metalness={0.05}
         />
       </mesh>
-      
-      <gridHelper args={[200, 40, '#555555', '#333333']} position={[0, 0.01, 0]} />
     </>
   );
 };

@@ -22,6 +22,7 @@ const Index = () => {
               { id: "main", label: "Главная" },
               { id: "about", label: "О игре" },
               { id: "gameplay", label: "Геймплей" },
+              { id: "graphics", label: "Графика" },
               { id: "mechanics", label: "Механики" },
               { id: "download", label: "Скачать" },
             ].map((item) => (
@@ -167,6 +168,85 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="graphics" className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-5xl font-bold mb-12 text-center">Графика</h2>
+          <div className="max-w-6xl mx-auto">
+            <p className="text-center text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
+              Гиперреалистичная графика с детализированными персонажами и окружением.
+              Каждая модель проходит полный цикл создания: от концепта до текстурирования.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <Card className="overflow-hidden">
+                <CardContent className="p-0">
+                  <img 
+                    src="https://cdn.poehali.dev/files/cf23feb6-c999-4163-b87d-3db15fc9c0dd.jpg"
+                    alt="Варианты персонажей"
+                    className="w-full h-auto"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold mb-2">Разнообразие персонажей</h3>
+                    <p className="text-muted-foreground">
+                      Более 100 вариантов внешности, одежды и стилей для создания уникального персонажа
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="overflow-hidden">
+                <CardContent className="p-0">
+                  <img 
+                    src="https://cdn.poehali.dev/files/4e8040b8-83e1-4ead-ac06-e1aae16dd5ac.jpg"
+                    alt="3D моделирование"
+                    className="w-full h-auto"
+                  />
+                  <div className="p-6">
+                    <h3 className="text-2xl font-bold mb-2">Создание 3D моделей</h3>
+                    <p className="text-muted-foreground">
+                      Детализированная полигональная сетка и реалистичные пропорции персонажей
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Card className="bg-card/50 backdrop-blur-sm border-primary/30">
+              <CardContent className="p-8">
+                <img 
+                  src="https://cdn.poehali.dev/files/6c424a84-5021-4954-aa0e-1b0bcdf48536.jpg"
+                  alt="Процесс создания"
+                  className="w-full rounded-lg mb-6"
+                />
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div>
+                    <Icon name="Box" className="text-primary mb-3" size={32} />
+                    <h4 className="text-xl font-bold mb-2">UV-развертка</h4>
+                    <p className="text-muted-foreground text-sm">
+                      Профессиональная развертка для качественного текстурирования
+                    </p>
+                  </div>
+                  <div>
+                    <Icon name="Palette" className="text-secondary mb-3" size={32} />
+                    <h4 className="text-xl font-bold mb-2">Текстурирование</h4>
+                    <p className="text-muted-foreground text-sm">
+                      Реалистичные материалы и детализированные текстуры
+                    </p>
+                  </div>
+                  <div>
+                    <Icon name="Bone" className="text-primary mb-3" size={32} />
+                    <h4 className="text-xl font-bold mb-2">Риггинг</h4>
+                    <p className="text-muted-foreground text-sm">
+                      Полная система костей для естественной анимации
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

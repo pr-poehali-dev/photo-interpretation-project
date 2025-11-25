@@ -2,9 +2,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import { useState } from "react";
+import { Game3D } from "@/components/Game3D";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("main");
+  const [showGame, setShowGame] = useState(false);
+
+  if (showGame) {
+    return <Game3D />;
+  }
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -555,9 +561,13 @@ const Index = () => {
                 <Icon name="Monitor" className="text-primary mx-auto mb-4" size={48} />
                 <h3 className="text-2xl font-bold mb-2">PC</h3>
                 <p className="text-muted-foreground mb-4">Windows / macOS / Linux</p>
-                <Button className="w-full" size="lg">
-                  Скачать
-                  <Icon name="Download" className="ml-2" size={20} />
+                <Button 
+                  className="w-full" 
+                  size="lg"
+                  onClick={() => setShowGame(true)}
+                >
+                  Играть в браузере
+                  <Icon name="Play" className="ml-2" size={20} />
                 </Button>
               </CardContent>
             </Card>

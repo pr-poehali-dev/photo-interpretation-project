@@ -6,11 +6,6 @@ import { Game3D } from "@/components/Game3D";
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("main");
-  const [showGame, setShowGame] = useState(false);
-
-  if (showGame) {
-    return <Game3D />;
-  }
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
@@ -564,10 +559,10 @@ const Index = () => {
                 <Button 
                   className="w-full" 
                   size="lg"
-                  onClick={() => setShowGame(true)}
+                  disabled
                 >
-                  Играть в браузере
-                  <Icon name="Play" className="ml-2" size={20} />
+                  Скоро запуск
+                  <Icon name="Clock" className="ml-2" size={20} />
                 </Button>
               </CardContent>
             </Card>
@@ -576,9 +571,9 @@ const Index = () => {
                 <Icon name="Smartphone" className="text-secondary mx-auto mb-4" size={48} />
                 <h3 className="text-2xl font-bold mb-2">Mobile</h3>
                 <p className="text-muted-foreground mb-4">Android / iOS</p>
-                <Button className="w-full" size="lg" variant="secondary">
-                  Скачать
-                  <Icon name="Download" className="ml-2" size={20} />
+                <Button className="w-full" size="lg" variant="secondary" disabled>
+                  Скоро запуск
+                  <Icon name="Clock" className="ml-2" size={20} />
                 </Button>
               </CardContent>
             </Card>

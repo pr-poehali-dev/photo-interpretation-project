@@ -174,11 +174,11 @@ const Index = () => {
 
       <section id="graphics" className="py-24 bg-background">
         <div className="container mx-auto px-4">
-          <h2 className="text-5xl font-bold mb-12 text-center">Графика</h2>
+          <h2 className="text-5xl font-bold mb-12 text-center">3D Движок и Графика</h2>
           <div className="max-w-6xl mx-auto">
             <p className="text-center text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-              Гиперреалистичная графика с детализированными персонажами и окружением.
-              Каждая модель проходит полный цикл создания: от концепта до текстурирования.
+              Полноценный 3D мир с открытым ландшафтом, реалистичными материалами и 
+              продвинутой системой оптимизации для плавного геймплея.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -190,10 +190,24 @@ const Index = () => {
                     className="w-full h-auto"
                   />
                   <div className="p-6">
-                    <h3 className="text-2xl font-bold mb-2">Разнообразие персонажей</h3>
-                    <p className="text-muted-foreground">
-                      Более 100 вариантов внешности, одежды и стилей для создания уникального персонажа
+                    <h3 className="text-2xl font-bold mb-2">3D Персонажи</h3>
+                    <p className="text-muted-foreground mb-3">
+                      Более 100 вариантов внешности с полным риггингом и анимацией
                     </p>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center gap-2">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Реалистичная текстура кожи</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>Тканевые материалы одежды</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="Check" className="text-primary" size={16} />
+                        <span>UV-карты для текстурирования</span>
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -206,43 +220,193 @@ const Index = () => {
                     className="w-full h-auto"
                   />
                   <div className="p-6">
-                    <h3 className="text-2xl font-bold mb-2">Создание 3D моделей</h3>
-                    <p className="text-muted-foreground">
-                      Детализированная полигональная сетка и реалистичные пропорции персонажей
+                    <h3 className="text-2xl font-bold mb-2">Пайплайн моделирования</h3>
+                    <p className="text-muted-foreground mb-3">
+                      Полный цикл от концепта до готовой модели
                     </p>
+                    <div className="space-y-2 text-sm">
+                      <div className="flex items-center gap-2">
+                        <Icon name="Check" className="text-secondary" size={16} />
+                        <span>Полигональное моделирование</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="Check" className="text-secondary" size={16} />
+                        <span>UV-развертка</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Icon name="Check" className="text-secondary" size={16} />
+                        <span>Риггинг для анимации</span>
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
             </div>
 
-            <Card className="bg-card/50 backdrop-blur-sm border-primary/30">
+            <Card className="mb-8 border-primary/30">
               <CardContent className="p-8">
                 <img 
                   src="https://cdn.poehali.dev/files/6c424a84-5021-4954-aa0e-1b0bcdf48536.jpg"
                   alt="Процесс создания"
                   className="w-full rounded-lg mb-6"
                 />
+                <h3 className="text-3xl font-bold mb-6 text-center">Технический процесс</h3>
                 <div className="grid md:grid-cols-3 gap-6">
                   <div>
                     <Icon name="Box" className="text-primary mb-3" size={32} />
-                    <h4 className="text-xl font-bold mb-2">UV-развертка</h4>
+                    <h4 className="text-xl font-bold mb-2">Моделирование</h4>
                     <p className="text-muted-foreground text-sm">
-                      Профессиональная развертка для качественного текстурирования
+                      Создание сетки персонажей и объектов с оптимальной полигональностью
                     </p>
                   </div>
                   <div>
                     <Icon name="Palette" className="text-secondary mb-3" size={32} />
                     <h4 className="text-xl font-bold mb-2">Текстурирование</h4>
                     <p className="text-muted-foreground text-sm">
-                      Реалистичные материалы и детализированные текстуры
+                      Реалистичные PBR-материалы с UV-картами для качественной детализации
                     </p>
                   </div>
                   <div>
                     <Icon name="Bone" className="text-primary mb-3" size={32} />
                     <h4 className="text-xl font-bold mb-2">Риггинг</h4>
                     <p className="text-muted-foreground text-sm">
-                      Полная система костей для естественной анимации
+                      Полная система костей для естественной анимации движений
                     </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <Card className="bg-card">
+                <CardContent className="p-6">
+                  <Icon name="Mountain" className="text-primary mb-4" size={40} />
+                  <h3 className="text-2xl font-bold mb-4">Открытый мир</h3>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <Icon name="Minus" className="mt-1 flex-shrink-0" size={16} />
+                      <span>Ландшафт с реками и землёй</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Minus" className="mt-1 flex-shrink-0" size={16} />
+                      <span>Дороги с чёрным бетоном и разметкой</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Minus" className="mt-1 flex-shrink-0" size={16} />
+                      <span>Вода с волнами и голубым оттенком</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Minus" className="mt-1 flex-shrink-0" size={16} />
+                      <span>Деревья с текстурированными листьями</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card">
+                <CardContent className="p-6">
+                  <Icon name="Building2" className="text-secondary mb-4" size={40} />
+                  <h3 className="text-2xl font-bold mb-4">Материалы зданий</h3>
+                  <ul className="space-y-2 text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <Icon name="Minus" className="mt-1 flex-shrink-0" size={16} />
+                      <span>Стены: бетон, кирпич, доски, панели, сплайны</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Minus" className="mt-1 flex-shrink-0" size={16} />
+                      <span>Двери и ворота из дерева</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <Icon name="Minus" className="mt-1 flex-shrink-0" size={16} />
+                      <span>Окна с пластиковой рамой и стеклом</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+
+            <Card className="mt-8 bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/50">
+              <CardContent className="p-8">
+                <h3 className="text-3xl font-bold mb-6 text-center">Оптимизация</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="text-xl font-bold mb-3 flex items-center gap-2">
+                      <Icon name="Zap" className="text-primary" size={24} />
+                      Производительность
+                    </h4>
+                    <ul className="space-y-2 text-muted-foreground text-sm">
+                      <li>• Обрезка моделей — удаление лишних полигонов</li>
+                      <li>• Квантование — снижение точности до 8-16 бит</li>
+                      <li>• LOD-система для дальних объектов</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold mb-3 flex items-center gap-2">
+                      <Icon name="Settings" className="text-secondary" size={24} />
+                      Настройка
+                    </h4>
+                    <ul className="space-y-2 text-muted-foreground text-sm">
+                      <li>• Регулировка точности (mixed precision)</li>
+                      <li>• Настройка гиперпараметров</li>
+                      <li>• Оптимизация размера пакетов</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="mt-8 bg-card border-secondary/30">
+              <CardContent className="p-8">
+                <h3 className="text-3xl font-bold mb-6 text-center">Атмосфера и звук</h3>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <Icon name="Sun" className="text-primary mx-auto mb-3" size={40} />
+                    <h4 className="text-xl font-bold mb-2">Освещение</h4>
+                    <p className="text-muted-foreground text-sm">
+                      Динамическое освещение и пост-обработка для реализма
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <Icon name="Music" className="text-secondary mx-auto mb-3" size={40} />
+                    <h4 className="text-xl font-bold mb-2">Музыка</h4>
+                    <p className="text-muted-foreground text-sm">
+                      Молодёжный рок без авторских прав
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <Icon name="Volume2" className="text-primary mx-auto mb-3" size={40} />
+                    <h4 className="text-xl font-bold mb-2">Звуки</h4>
+                    <p className="text-muted-foreground text-sm">
+                      Звуки природы и окружения для погружения
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="mt-8 bg-card">
+              <CardContent className="p-8">
+                <h3 className="text-3xl font-bold mb-6 text-center">Интерфейс игрока</h3>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="flex flex-col items-center text-center">
+                    <Icon name="Gamepad2" className="text-primary mb-3" size={40} />
+                    <h4 className="text-lg font-bold">Джойстик</h4>
+                    <p className="text-muted-foreground text-sm mt-1">Управление персонажем</p>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <Icon name="Package" className="text-secondary mb-3" size={40} />
+                    <h4 className="text-lg font-bold">Инвентарь</h4>
+                    <p className="text-muted-foreground text-sm mt-1">Вещи и предметы</p>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <Icon name="Heart" className="text-primary mb-3" size={40} />
+                    <h4 className="text-lg font-bold">Здоровье</h4>
+                    <p className="text-muted-foreground text-sm mt-1">Показатели персонажа</p>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <Icon name="MapPin" className="text-secondary mb-3" size={40} />
+                    <h4 className="text-lg font-bold">Миникарта</h4>
+                    <p className="text-muted-foreground text-sm mt-1">Навигация по миру</p>
                   </div>
                 </div>
               </CardContent>
